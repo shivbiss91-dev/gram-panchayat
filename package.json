@@ -1,0 +1,33 @@
+{
+  "name": "digital-complaint-portal-gram-panchayat",
+  "version": "1.0.0",
+  "description": "Digital Complaint Portal for Gram Panchayat - Full-Stack Web Application",
+  "main": "server/dist/index.js",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build:server": "npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "build": "npm run build:server && npm run build:client",
+    "test": "npm --prefix server run test",
+    "seed": "npm --prefix server run seed",
+    "db:push": "npm --prefix server run prisma:push",
+    "db:generate": "npm --prefix server run prisma:generate"
+  },
+  "keywords": [
+    "gram-panchayat",
+    "civic-portal",
+    "complaint-management",
+    "e-governance",
+    "react",
+    "typescript",
+    "express",
+    "prisma"
+  ],
+  "author": "Gram Panchayat Digital Initiative",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
