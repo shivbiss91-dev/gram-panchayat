@@ -37,7 +37,7 @@ import { AdminProfilePage } from './pages/admin/AdminProfilePage';
 
 export function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ToastProvider>
         <AuthProvider>
           <Routes>
